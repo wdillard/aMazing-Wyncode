@@ -1,7 +1,7 @@
 {
   "name": "aMazing-Wyncode",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "aMazing-Wyncode.js",
   "author": "wdillard <dillardwa@gmail.com>",
   "license": "MIT",
   "dependencies": {
