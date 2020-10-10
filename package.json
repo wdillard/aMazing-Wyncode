@@ -1,0 +1,10 @@
+{
+  "name": "aMazing-Wyncode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wdillard <dillardwa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
