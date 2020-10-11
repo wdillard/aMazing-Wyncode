@@ -31,7 +31,6 @@ console.log('');
 
 // Start
 console.log('You have now entered the maze and are guided right and then left.');
-console.log('')
 
 let firstIntersection = true;
 
@@ -46,17 +45,14 @@ while(firstIntersection) {
         console.log('You traved forward to intersection 2.');
         firstIntersection = false;
     } else if (userInput.trim().toUpperCase() === 'RIGHT') {
-        console.log('Hall guides to the right and deadends, Return to intersection 1.');
+        console.log('Hall guides to the right and deadends, You have returned to intersection 1.');
         firstIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
         console.log('You should push forward');
         firstIntersection = true;
-    } else if (!commands.includes(userInput.trim().toUpperCase())) {
-        console.log('INVALID COMMAND')
     } else {
-        firstIntersection = false;
+        console.log('INVALID COMMAND');
     }
-        
 }
 
 let secondIntersection = true;
@@ -67,20 +63,18 @@ let secondIntersection = true;
 // Back: Go back to intersection 1
 
 while(secondIntersection) {
-    let userInput = prompt.question(`Choose a direction: ${secondCommands.toString()}`)
+    let userInput = prompt.question(`\n Choose a direction: ${secondCommands.toString()} \n`)
     if (userInput.trim().toUpperCase() === 'LEFT') {
         console.log('You turned left and traved to intersection 3.');
         secondIntersection = false;
     } else if (userInput.trim().toUpperCase() === 'RIGHT') {
-        console.log('Hall deadends. Return back to intersection 2.');
+        console.log('Hall deadends. You have returned back to intersection 2.');
         secondIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
         console.log('You should push forward');
         firstIntersection = true;
-    } else if (!commands.includes(userInput.trim().toUpperCase())) {
-        console.log('INVALID COMMAND')
     } else {
-        secondIntersection = false;
+        console.log('INVALID COMMAND');
     }
 }
 
@@ -93,20 +87,18 @@ let thirdIntersection = true;
 // Back: Go back to intersection 2
 
 while(thirdIntersection) {
-    let userInput = prompt.question(`Choose a direction: ${thirdCommands.toString()}`)
+    let userInput = prompt.question(`\n Choose a direction: ${thirdCommands.toString()} \n`)
     if (userInput.trim().toUpperCase() === 'FORWARD') {
         console.log('You traved forward to intersection 4.');
         thirdIntersection = false;
     } else if (userInput.trim().toUpperCase() === 'RIGHT') {
-        console.log('Hall guides to the right, then turns to the left and deadends. Return to intersection 3.');
+        console.log('Hall guides to the right, then turns to the left and deadends. You have returned to intersection 3.');
         thirdIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
         console.log('You should push forward');
         secondIntersection = true;
-    } else if (!commands.includes(userInput.trim().toUpperCase())) {
-        console.log('INVALID COMMAND')
     } else {
-        thirdIntersection = false;
+        console.log('INVALID COMMAND')
     }
 }
 
@@ -118,7 +110,7 @@ let forthIntersection = true;
 // Back: Go back to intersection 3
 
 while(forthIntersection) {
-    let userInput = prompt.question(`Choose a direction: ${forthCommands.toString()}`)
+    let userInput = prompt.question(`\n Choose a direction: ${forthCommands.toString()} \n`)
     if (userInput.trim().toUpperCase() === 'LEFT') {
         console.log('You turned left and traved to intersection 5.');
         forthIntersection = false;
@@ -128,10 +120,8 @@ while(forthIntersection) {
     } else if (userInput.trim().toUpperCase() === 'BACK') {
         console.log('You should push forward')
         thirdIntersection = true;
-    } else if (!commands.includes(userInput.trim().toUpperCase())) {
-        console.log('INVALID COMMAND')
     } else {
-        playAgain;
+        console.log('INVALID COMMAND')
     }
 }
 
@@ -143,19 +133,27 @@ let fifthIntersection = true;
 // Back: Go back intersection 4
 
 while(fifthIntersection) {
-    let userInput = prompt.question(`Choose a direction: ${fifthCommands.toString()}`)
+    let userInput = prompt.question(`\n Choose a direction: ${fifthCommands.toString()} \n`)
     if (userInput.trim().toUpperCase() === 'FORWARD') {
         console.log('Hall deadends, back to intersection 5.');
-        fifthIntersection();
+        fifthIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'LEFT') {
         console.log('Hall deadends, back to intersection 5.')
-        fifthIntersection();
+        fifthIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
         console.log('Good idea to retrace and regroup.')
-        forthIntersection();
-    } else if (!commands.includes(userInput.trim().toUpperCase())) {
-        console.log('INVALID COMMAND')
+        forthIntersection = true;
     } else {
-        fifthIntersection = false;
+        console.log('INVALID COMMAND')
     }
 }
+
+const playAgain = () => {
+  let playAgain = prompt.question('Do you want to play again? Y || N \n');
+  playAgain = playAgain.toUpperCase();
+  if (playAgain === 'Y') {
+    let firstIntersection = true;
+  } else {
+    console.log('Thanks for playing.\nGoodbye.');
+  }
+};
