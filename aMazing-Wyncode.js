@@ -47,7 +47,7 @@ while(firstIntersection) {
         console.log('Hall guides to the right and deadends, You have returned to intersection 1.');
         firstIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
-        console.log('You should push forward');
+        console.log('You dont want to go back. See what lies ahead');
         firstIntersection = true;
     } else {
         console.log('INVALID COMMAND');
@@ -73,7 +73,7 @@ while(secondIntersection) {
         console.log('Hall deadends. You have returned back to intersection 2.');
         secondIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
-        console.log('You should push forward');
+        console.log('Push yourself. No struggle, no growth');
         firstIntersection = true;
     } else {
         console.log('INVALID COMMAND');
@@ -99,7 +99,7 @@ while(thirdIntersection) {
         console.log('Hall guides to the right, then turns to the left and deadends. \nYou have returned to intersection 3.');
         thirdIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
-        console.log('You should push forward');
+        console.log('Push yourself to be great.');
         secondIntersection = true;
     } else {
         console.log('INVALID COMMAND')
@@ -125,7 +125,7 @@ while(forthIntersection) {
         console.log('You turned left and the hall deadends. You have returned to intersection 4.')
         forthIntersection = true;
     } else if (userInput.trim().toUpperCase() === 'BACK') {
-        console.log('You should push forward')
+        console.log('Stay uncomfortable. Comfort breeds complacency.')
         thirdIntersection = true;
     } else {
         console.log('INVALID COMMAND')
