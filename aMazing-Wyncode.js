@@ -121,7 +121,7 @@ while(forthIntersection) {
     let userInput = prompt.question(`Choose a direction: ${forthCommands.toString()}`)
     if (userInput.trim().toUpperCase() === 'LEFT') {
         console.log('You turned left and traved to intersection 5.');
-        fifthIntersection = true;
+        forthIntersection = false;
     } else if (userInput.trim().toUpperCase() === 'RIGHT') {
         console.log('Hall guides right and the left to EXIT, You Win!!!')
         playAgain();
