@@ -119,8 +119,8 @@ while(forthIntersection) {
     let userInput = prompt.question(`\n Choose a direction: ${forthCommands.toString()} \n`)
     console.log('');
     if (userInput.trim().toUpperCase() === 'FORWARD') {
-        console.log('You travel forward and the hall guides right and then left to EXIT, You Win!!!');
-        playAgain();
+        console.log('You travel forward and the hall guides right and then left to EXIT, You Win!!!\n');
+        forthIntersection = false;
     } else if (userInput.trim().toUpperCase() === 'LEFT') {
         console.log('You turned left and the hall deadends. You have returned to intersection 4.')
         forthIntersection = true;
@@ -132,12 +132,4 @@ while(forthIntersection) {
     }
 }
 
-const playAgain = () => {
-  let playAgain = prompt.question('Do you want to play again? Y || N \n');
-  playAgain = playAgain.toUpperCase();
-  if (playAgain === 'Y') {
-    let firstIntersection = true;
-  } else {
-    console.log('Thanks for playing.\nGoodbye.');
-  }
-};
+console.log('Thanks for playing.\nGoodbye.');
